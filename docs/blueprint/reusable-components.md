@@ -1,0 +1,2 @@
+# Componentes
+Motor shipping y orderMessage puros con pruebas; catálogo normalizado; checkout modal por entrega; selector municipio/localidad; geolocalización opcional; Support con adjuntos, dictado y productos; API IA con catálogo público/IDs validados.

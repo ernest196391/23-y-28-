@@ -1,0 +1,2 @@
+# Baseline
+Next App Router; página única, carrito local y sin checkout; asistente antiguo por reglas. Build anterior READY. Sin terminal/navegador en esta sesión. Se añade test de lógica ejecutado en build Vercel.

@@ -1,0 +1,2 @@
+# UI
+Se conserva header/hero/catalog existente. Ayuda en barra que ocupa espacio en flujo, no píldora sobre productos. Retrato Bessy no disponible; nombre textual temporal. WhatsApp muestra configuración pendiente si falta número.

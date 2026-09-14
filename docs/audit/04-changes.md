@@ -1,0 +1,2 @@
+# Cambios
+Catálogo extraído a lib/catalog.js sin carga nueva. Carrito enlaza /checkout. Se elimina chat por reglas. Nueva interfaz Bessy y API con proveedores reales configurables, fotos/PDF/TXT, dictado y recomendaciones para añadir. Contrato en docs/INTEGRATIONS.md.

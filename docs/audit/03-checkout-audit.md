@@ -1,0 +1,2 @@
+# Checkout
+/checkout: recogida con nombre/teléfono y 0 CUP; entrega con municipio/localidad/dirección/referencia/geolocalización. Datos de pedido no enviados a NEXO. Mensajería desconocida no se considera cero. Referencia 2328 y resumen de confirmación; sin reserva/pago/registro operativo.

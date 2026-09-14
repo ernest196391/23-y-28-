@@ -1,0 +1,3 @@
+# Configuración
+config/business.json: marca/dirección/whatsapp/shippingRates/avatar. shippingRates usa claves Municipio|Localidad y valor CUP numérico no negativo, solo aprobados. config/localities.json geografía a validar según cobertura.
+Vercel: MARKET_WHATSAPP_NUMBER y OpenAI (OPENAI_API_KEY + OPENAI_MODEL) o Gemini (GEMINI_API_KEY + GEMINI_MODEL). Ningún secreto en Git. Fotos y precios reales pendientes de ZIP.

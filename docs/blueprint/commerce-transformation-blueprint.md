@@ -1,0 +1,2 @@
+# Patrón reusable
+Carrito persistente → modalidad → datos mínimos → cotización → resumen → canal de confirmación. Separar tarifa pendiente de cero. Referencia no implica registro/reserva. Catálogo público separado de proveedor IA; IA recomienda IDs existentes y nunca ejecuta pedidos. Configurar recursos por negocio.
