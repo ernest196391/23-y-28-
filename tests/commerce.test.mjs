@@ -10,3 +10,9 @@ test("WhatsApp needs valid destination and encodes text",()=>{assert.equal(whats
 test("pickup message contains quantities and no delivery address",()=>{const t=orderMessage({...order,address:"NO MOSTRAR",municipality:"NO MOSTRAR"});assert.ok(t.includes("2 × Leche (1 litro)"));assert.ok(!t.includes("NO MOSTRAR"));assert.ok(t.includes("Subtotal:"));assert.ok(t.includes("Total:"));assert.ok(!/registrado|reservado|pagado/.test(t))});
 test("unknown shipping is explicitly pending",()=>{const t=orderMessage({...order,mode:"delivery",fee:null,municipality:"Plaza",locality:"Vedado",address:"Calle 23",location:"23,-82"});assert.ok(t.includes("Total: Pendiente"));assert.ok(t.includes("Mensajería: Por confirmar"));assert.ok(t.includes("query=23,-82"))});
 test("known fee is included in total",()=>{const t=orderMessage({...order,mode:"delivery",fee:400});assert.ok(t.includes("Total: "+new Intl.NumberFormat("es-CU").format(2000)+" CUP"))});
+
+import {readFileSync} from "node:fs";
+const business=JSON.parse(readFileSync(new URL("../config/business.json",import.meta.url),"utf8"));
+test("authorized WhatsApp destination",()=>assert.ok(whatsappUrl(business.whatsapp,"pedido").startsWith("https://wa.me/5354056173?")));
+test("NEXO approved shipping snapshot applied",()=>{assert.equal(shipping("delivery","Plaza de la Revolución","Nuevo Vedado",business.shippingRates),1000);assert.equal(shipping("delivery","Habana del Este","Guanabo",business.shippingRates),6000);assert.equal(shipping("pickup","","",business.shippingRates),0)});
+test("all activated rates are valid",()=>{assert.ok(Object.keys(business.shippingRates).length>200);for(const n of Object.values(business.shippingRates))assert.ok(Number.isFinite(n)&&n>=0)});
