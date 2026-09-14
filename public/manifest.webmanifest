@@ -1,0 +1,9 @@
+{
+  "name": "Mercado 23 y 28",
+  "short_name": "23 y 28",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbf8f1",
+  "theme_color": "#439ea9",
+  "lang": "es"
+}
