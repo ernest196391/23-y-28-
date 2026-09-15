@@ -52,7 +52,7 @@ export default function Support({onAdd,cart={}}){
   const dictationBase=useRef(""),committedSpeech=useRef(""),sessionSpeech=useRef(""),listenWanted=useRef(false),voiceSending=useRef(false);
 
   useEffect(()=>{fetch("/api/commerce/config").then(r=>r.json()).then(setConfig).catch(()=>setError("No pudimos cargar la configuración."))},[]);
-  useEffect(()=>{const t=setTimeout(()=>setNudge(true),900),h=setTimeout(()=>setNudge(false),9000);return()=>{clearTimeout(t);clearTimeout(h)}},[]);
+  useEffect(()=>{const t=setTimeout(()=>setNudge(true),900),h=setTimeout(()=>setNudge(false),9000);const dismiss=()=>setNudge(false);window.addEventListener("scroll",dismiss,{passive:true});return()=>{clearTimeout(t);clearTimeout(h);window.removeEventListener("scroll",dismiss)}},[]);
   useEffect(()=>()=>{listenWanted.current=false;recognition.current?.abort();stream?.getTracks().forEach(t=>t.stop())},[stream]);
   useEffect(()=>{if(open)panel.current?.focus();else launcher.current?.focus()},[open]);
   useEffect(()=>{end.current?.scrollIntoView({block:"nearest"})},[messages,busy]);
