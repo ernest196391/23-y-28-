@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="perritos-calientes">
+<rect width="400" height="400" rx="0" fill="#EAF6F5"/>
+<circle cx="200" cy="192" r="128" fill="#FFFFFF"/>
+<circle cx="200" cy="192" r="128" fill="none" stroke="#BFE6E2" stroke-width="2"/>
+<text x="200" y="238" font-size="140" text-anchor="middle" font-family="'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif">🌭</text>
+</svg>
