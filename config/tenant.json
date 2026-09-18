@@ -1,8 +1,64 @@
 {
+  "slug": "mercado-23-y-28",
   "name": "Mercado 23 y 28",
+  "shortName": "23 y 28",
+  "tagline": "Tu vecino de confianza",
+  "logoTitle": {
+    "top": "MERCADO",
+    "bottom": "23 Y 28"
+  },
   "address": "23 y 28, Vedado, La Habana, Cuba",
+  "addressLines": [
+    "23 y 28, Vedado",
+    "La Habana, Cuba"
+  ],
+  "pickupPoint": "Mercado 23 y 28 · Vedado",
   "whatsapp": "5354056173",
   "hours": "De 9:00 a. m. a 9:00 p. m.",
+  "instagram": "https://www.instagram.com/mercado23y28/",
+  "currency": "CUP",
+  "locale": "es-CU",
+  "seo": {
+    "title": "Mercado 23 y 28 — Vedado, La Habana",
+    "description": "Tu vecino de confianza. Compra fácil desde el móvil."
+  },
+  "hero": {
+    "line1": "Tu vecino",
+    "line2": "de confianza.",
+    "subtitle": "Tu compra del día a día, ahora desde el móvil.",
+    "cta": "Comprar ahora",
+    "alt": "Fachada de Mercado 23 y 28 con su letrero y entrada"
+  },
+  "catalogIntro": {
+    "eyebrow": "PARA TU COMPRA",
+    "allTitle": "Un poquito de todo"
+  },
+  "theme": {
+    "ink": "#17383a",
+    "primary": "#1d676e",
+    "accent": "#e8753d",
+    "mint": "#dff2ee",
+    "assistant": "#2fa7a0",
+    "assistantDark": "#1e8f99",
+    "assistantInk": "#137d83",
+    "assistantBorder": "#9ddedb",
+    "assistantSoft": "#eef9f8",
+    "assistantSoftHover": "#dbf1ef"
+  },
+  "assistant": {
+    "name": "Veci",
+    "avatar": "",
+    "role": "Asistente de Mercado 23 y 28",
+    "greeting": "¡Hola! Soy Veci 👋",
+    "greetingSub": "¿Qué necesitas hoy?",
+    "intro": "Puedo ayudarte a buscar productos, armar tu compra, ver opciones de envío o resolver cualquier duda. ¡Estoy aquí para ti! 💙",
+    "closing": "Buenas compras, mejores vecinos ♡",
+    "persona": "asistente de {name}, {address}. Responde en español breve, cálido y resolutivo.",
+    "nudge": "Hola Veci"
+  },
+  "orderTitle": "MERCADO 23 Y 28",
+  "orderPrefix": "2328",
+  "footerNote": "Catálogo, fotos y precios tomados del inventario del mercado. La disponibilidad se confirma al tramitar el pedido.",
   "shippingRates": {
     "Arroyo Naranjo|Poey": 2000,
     "Arroyo Naranjo|Santa Amalia": 1900,
@@ -344,7 +400,5 @@
     "San Miguel del Padrón|Las Palmas": 3500,
     "San Miguel del Padrón|La Rosita": 3500
   },
-  "assistantAvatar": "",
-  "assistantName": "Veci",
   "shippingSource": "NEXO config/shipping-rates.csv — snapshot aprobado por usuario"
 }

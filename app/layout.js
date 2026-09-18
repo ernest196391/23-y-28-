@@ -2,9 +2,11 @@ import "./globals.css";
 import "./veci.css";
 import "./veci-fixes.css";
 import InstallPrompt from "./InstallPrompt";
+import {tenant} from "../lib/tenant";
+const themeVars=Object.entries({"--ink":tenant.theme.ink,"--deep":tenant.theme.primary,"--orange":tenant.theme.accent,"--mint":tenant.theme.mint,"--veci-teal":tenant.theme.assistant,"--veci-dark":tenant.theme.assistantDark,"--veci-brand":tenant.theme.assistantInk,"--veci-border":tenant.theme.assistantBorder,"--veci-tint":tenant.theme.assistantSoft,"--veci-tint-hover":tenant.theme.assistantSoftHover}).map(([k,v])=>k+":"+v).join(";");
 export const metadata={
-  title:"Mercado 23 y 28 — Vedado, La Habana",
-  description:"Tu vecino de confianza. Compra fácil desde el móvil.",
+  title:tenant.seo.title,
+  description:tenant.seo.description,
   manifest:"/manifest.webmanifest?v=4",
   icons:{
     icon:[
@@ -13,8 +15,8 @@ export const metadata={
     ],
     apple:"/apple-touch-icon.png?v=4"
   },
-  appleWebApp:{capable:true,title:"23 y 28",statusBarStyle:"default"},
+  appleWebApp:{capable:true,title:tenant.shortName,statusBarStyle:"default"},
   robots:{index:false,follow:false}
 };
-export const viewport={themeColor:"#2FA7A0",width:"device-width",initialScale:1};
-export default function RootLayout({children}){return <html lang="es"><body>{children}<InstallPrompt/></body></html>}
+export const viewport={themeColor:tenant.theme.assistant,width:"device-width",initialScale:1};
+export default function RootLayout({children}){return <html lang="es"><body><style dangerouslySetInnerHTML={{__html:":root,.veciV2{"+themeVars+"}"}}/>{children}<InstallPrompt/></body></html>}
