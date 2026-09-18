@@ -1,5 +1,5 @@
-import business from "../../../../config/business.json";
+import {tenant} from "../../../../lib/tenant";
 import {whatsappUrl} from "../../../../lib/commerce.mjs";
 import {assistantReady} from "../../../../lib/ai-config";
 export const dynamic="force-dynamic";
-export async function GET(){return Response.json({whatsapp:whatsappUrl(process.env.MARKET_WHATSAPP_NUMBER||business.whatsapp,"Hola, necesito ayuda con Mercado 23 y 28."),assistantReady:assistantReady(),avatar:business.assistantAvatar},{headers:{"Cache-Control":"no-store"}})}
+export async function GET(){return Response.json({whatsapp:whatsappUrl(process.env.MARKET_WHATSAPP_NUMBER||tenant.whatsapp,"Hola, necesito ayuda con "+tenant.name+"."),assistantReady:assistantReady(),avatar:tenant.assistant.avatar},{headers:{"Cache-Control":"no-store"}})}

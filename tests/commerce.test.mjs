@@ -12,7 +12,7 @@ test("unknown shipping is explicitly pending",()=>{const t=orderMessage({...orde
 test("known fee is included in total",()=>{const t=orderMessage({...order,mode:"delivery",fee:400});assert.ok(t.includes("Total: "+new Intl.NumberFormat("es-CU").format(2000)+" CUP"))});
 
 import {readFileSync} from "node:fs";
-const business=JSON.parse(readFileSync(new URL("../config/business.json",import.meta.url),"utf8"));
-test("authorized WhatsApp destination",()=>assert.ok(whatsappUrl(business.whatsapp,"pedido").startsWith("https://wa.me/5354056173?")));
-test("NEXO approved shipping snapshot applied",()=>{assert.equal(shipping("delivery","Plaza de la Revolución","Nuevo Vedado",business.shippingRates),1000);assert.equal(shipping("delivery","Habana del Este","Guanabo",business.shippingRates),6000);assert.equal(shipping("pickup","","",business.shippingRates),0)});
-test("all activated rates are valid",()=>{assert.ok(Object.keys(business.shippingRates).length>200);for(const n of Object.values(business.shippingRates))assert.ok(Number.isFinite(n)&&n>=0)});
+const tenant=JSON.parse(readFileSync(new URL("../config/tenant.json",import.meta.url),"utf8"));
+test("authorized WhatsApp destination",()=>assert.ok(whatsappUrl(tenant.whatsapp,"pedido").startsWith("https://wa.me/5354056173?")));
+test("NEXO approved shipping snapshot applied",()=>{assert.equal(shipping("delivery","Plaza de la Revolución","Nuevo Vedado",tenant.shippingRates),1000);assert.equal(shipping("delivery","Habana del Este","Guanabo",tenant.shippingRates),6000);assert.equal(shipping("pickup","","",tenant.shippingRates),0)});
+test("all activated rates are valid",()=>{assert.ok(Object.keys(tenant.shippingRates).length>200);for(const n of Object.values(tenant.shippingRates))assert.ok(Number.isFinite(n)&&n>=0)});
