@@ -47,7 +47,7 @@
   },
   "assistant": {
     "name": "Veci",
-    "avatar": "",
+    "avatar": "/brand/veci-avatar.png",
     "role": "Asistente de Mercado 23 y 28",
     "greeting": "¡Hola! Soy Veci 👋",
     "greetingSub": "¿Qué necesitas hoy?",

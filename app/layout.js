@@ -1,6 +1,6 @@
 import "./globals.css";
-import "./veci.css";
-import "./veci-fixes.css";
+import "./assistant.css";
+import "./assistant-fixes.css";
 import InstallPrompt from "./InstallPrompt";
 import {tenant} from "../lib/tenant";
 const themeVars=Object.entries({"--ink":tenant.theme.ink,"--deep":tenant.theme.primary,"--orange":tenant.theme.accent,"--mint":tenant.theme.mint,"--veci-teal":tenant.theme.assistant,"--veci-dark":tenant.theme.assistantDark,"--veci-brand":tenant.theme.assistantInk,"--veci-border":tenant.theme.assistantBorder,"--veci-tint":tenant.theme.assistantSoft,"--veci-tint-hover":tenant.theme.assistantSoftHover}).map(([k,v])=>k+":"+v).join(";");

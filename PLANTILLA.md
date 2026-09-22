@@ -49,7 +49,5 @@ entera.**
 
 ## Qué falta
 
-- Las clases CSS aún se llaman `veci*` y `bessy*` por herencia. Son internas y
-  no se ven, pero conviene renombrarlas a `assistant*` algún día.
-- El avatar del asistente es una imagen fija en `public/brand/`: cada negocio
-  necesita la suya.
+- Cada negocio necesita sus propios recursos de marca y avatar en `public/brand/`.
+- El inventario real y las tarifas deben cargarse por comercio antes de publicar.
